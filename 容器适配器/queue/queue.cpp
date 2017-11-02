@@ -1,8 +1,8 @@
 /***********************************
-   STL ÈİÆ÷ÊÊÅäÆ÷queue
+   STL å®¹å™¨é€‚é…å™¨queue
    2017/6/6
-   ×÷Õß:Ğ¡²Ë
-   Ã»ÓĞ×öÈİ´íÅĞ¶Ï
+   ä½œè€…:å°èœ
+   æ²¡æœ‰åšå®¹é”™åˆ¤æ–­
 **************************************/
 #include<iostream>
 #include<queue>
@@ -17,7 +17,7 @@ int main()
 {
 	queue<int> qu;
 	int i=0;
-	cout<<"1.¶ÓÎ²²åÈë 2.¶ÓÍ·É¾³ı 3.·µ»Ø¶ÓÎ²ºÍ¶ÓÍ·ÔªËØ 4.Çó´óĞ¡"<<endl;
+	cout<<"1.é˜Ÿå°¾æ’å…¥ 2.é˜Ÿå¤´åˆ é™¤ 3.è¿”å›é˜Ÿå°¾å’Œé˜Ÿå¤´å…ƒç´  4.æ±‚å¤§å°"<<endl;
 	while(1)
 	{  
 		cout<<"Please Input your choose:";
@@ -28,7 +28,7 @@ int main()
 		Insert(qu);
 		break;
 		case 2:
-        Del(qu);
+                Del(qu);
 		break;
 		case 3:
 		ReturnQueue(qu);
@@ -37,7 +37,7 @@ int main()
 		Size(qu);
 		break;
 		default:
-		cout<<"ÊäÈëÓĞÎó!"<<endl;
+		cout<<"è¾“å…¥æœ‰è¯¯!"<<endl;
 		}
 	}
 	return 0;
@@ -46,26 +46,26 @@ int main()
 void Insert(queue<int>&qu)
 {
 	int i=0;
-	cout<<"ÇëÄãÊäÈëÒª²åÈëµÄÔªËØ:";
+	cout<<"è¯·ä½ è¾“å…¥è¦æ’å…¥çš„å…ƒç´ :";
 	cin>>i;
 	qu.push(i);
-	cout<<"²åÈë³É¹¦"<<endl;
+	cout<<"æ’å…¥æˆåŠŸ"<<endl;
 }
 void Del(queue<int>&qu)
 {
 	if(qu.empty()==true)
 	return;
 	qu.pop();
-	cout<<"É¾³ı³É¹¦"<<endl;
+	cout<<"åˆ é™¤æˆåŠŸ"<<endl;
 }
 void ReturnQueue(queue<int> qu)
 {
 	if(qu.empty()==true)
 	return;
-	cout<<"¶ÓÎ²ÔªËØÎª:"<<qu.back()<<endl;
-	cout<<"¶ÓÍ·ÔªËØÎª:"<<qu.front()<<endl;
+	cout<<"é˜Ÿå°¾å…ƒç´ ä¸º:"<<qu.back()<<endl;
+	cout<<"é˜Ÿå¤´å…ƒç´ ä¸º:"<<qu.front()<<endl;
 }
 void Size(queue<int> qu)
 {  
-	cout<<"¶ÓÁĞÔªËØ¸öÊıÎª:"<<qu.size()<<endl;
+	cout<<"é˜Ÿåˆ—å…ƒç´ ä¸ªæ•°ä¸º:"<<qu.size()<<endl;
 }
